@@ -45,10 +45,8 @@ router.post('/register', async(req, res) => {
         name: req.body.name,
         password: req.body.password,
         email: req.body.email,
-        nick: req.body.nick,
-        totalPoints: req.body.totalPoints,
-        question: req.body.question,
-        teamEarth: req.body.teamEarth
+        andress: req.body.andress,
+        phone: req.body.phone,
     })
     try {
         const saverUser = await user.save()
