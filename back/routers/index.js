@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const user = require('./user');
+const user = require('./Ficr');
 require('../db/db')
 
-const User = require('../models/User');
+const User = require('../models/Ficr');
 
 router.get('/', (req, res) => {
     res.json({
@@ -63,7 +63,7 @@ router.post('/register', async(req, res) => {
 })
 
 router.post('/logout', function(req, res) {
-    res.json({ auth: false, token: null });
+    res.json({ auth: false });
 })
 
 router.use('/user', user),

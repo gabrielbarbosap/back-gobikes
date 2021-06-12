@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
-const Team = require('./Team');
 
 const { Schema } = mongoose;
 
-const userSchema = new Schema({
+const ficrSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -38,4 +37,4 @@ const userSchema = new Schema({
 
 });
 
-module.exports = mongoose.model('user', userSchema)
+module.exports = mongoose.model('ficr', ficrSchema)

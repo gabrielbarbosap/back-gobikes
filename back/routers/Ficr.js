@@ -1,4 +1,4 @@
-const User = require('../models/User')
+const User = require('../models/Ficr')
 
 const router = require('express').Router();
 
@@ -6,8 +6,7 @@ router.get('/', async(req, res) => {
     try {
         const user = await User.find()
         res.json({
-            sucess: true,
-            data: { user }
+            user
         })
     } catch (err) {
         res.json({
