@@ -93,7 +93,8 @@ router.put('/request-bike', async(req, res) => {
             $set: {
                 requests: {
                     user: req.body.user,
-                    date_request: req.body.date,
+                    date: new Date().getDate() + '/' + (new Date().getMonth()+ 1),
+                    phone: req.body.phone,
                     available: false,
                 }
             }
